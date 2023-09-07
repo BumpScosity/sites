@@ -45,6 +45,22 @@ body::before {
     transform: translate(-50%, -50%);
 }
 
+/* New button style */
+button {
+    background-color: rgba(25, 30, 33, 1); /* Background color without transparency */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+button:hover {
+    background-color: #333; /* Darker background color on hover */
+}
+
 /* Style headings to have a black text stroke */
 h1, h2, h3, h4, h5, h6 {
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Text stroke */
