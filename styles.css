@@ -1,0 +1,52 @@
+/* Reset default body margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Makes sure the background covers the full viewport height */
+    overflow: hidden; /* Hide overflow to prevent blurred content from showing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Create a pseudo-element for the background image */
+body::before {
+    content: "";
+    background-image: url('https://i.imgur.com/7SbtKvw.png'); /* Replace with your image URL */
+    background-size: cover; /* Adjusts the image size to cover the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    filter: blur(5px); /* Apply a 5px blur effect to the background image */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background behind all other content */
+}
+
+/* Style the container */
+.container {
+    text-align: center; /* Center the content horizontally within the container */
+    padding: 20px; /* Add padding to the content */
+    background-color: rgba(25, 30, 33, 0.8); /* Background color in RGB values */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners for the container */
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Text stroke */
+    width: 20%; /* Set the width to 80% of the viewport width */
+    height: 60%; /* Set the height to 40% of the viewport height */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top of the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style headings to have a black text stroke */
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Text stroke */
+}
+
